@@ -1,0 +1,24 @@
+<div class="container" >
+        <div class="text"*ngIf="!registerMode">
+            <h1>Find you match</h1>
+            <p class="lead">Come on itno view your matches...all you need to do is sign up!</p>
+          <div class="text-center">
+            <button class="btn btn-primary btn-lg" id="reg_button" (click)="registerToggle()">
+                Register</button>
+            <button class="btn btn-primary btn-lg" id="learn_button" >Learn more</button>
+          </div>
+        </div>
+  
+   
+
+        <div *ngIf="registerMode" class="form_conatiner" >
+            <div class="row" >
+                <div class="col-4" >
+                    <app-register  (cancelRegister)="cancelRegisterMode($event)"></app-register>               
+                </div>
+            </div>
+    
+        </div>
+ </div> 
+
+ <!-- [usersFromHomeComponent]=users  -->

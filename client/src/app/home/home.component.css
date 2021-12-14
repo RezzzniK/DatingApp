@@ -1,0 +1,35 @@
+.container{
+    margin-top: 5px;
+    text-align: center;
+    justify-content: center;
+}
+.text{
+    margin-top: 50px;
+    text-align: center;
+}
+.btn{
+    margin-top: 2px;
+}
+#reg_button{
+    margin-top: 2px;
+}
+#reg_button:hover{
+background-color: darkorange;
+}
+#learn_button{
+margin-left: 1px;
+}
+#learn_button:hover{
+    
+    background-color:darkkhaki;
+}
+
+.row{
+   justify-content: center;
+   
+}
+.col-4{
+    text-align: center;
+    margin-top: 100px;
+}
+
