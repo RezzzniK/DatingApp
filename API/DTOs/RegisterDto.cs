@@ -11,6 +11,7 @@ namespace API.DTOs
         [Required]
         public string Username { get; set; } 
         [Required]
+        [StringLength(8,MinimumLength =4)]//validation for user input 
         public string Password { get; set; }    
     }
 }
