@@ -1,0 +1,42 @@
+<!-- here we gonna use bootstrap element card -->
+<div class="card">
+    <div class="card-img-wrapper">
+        <!-- inside we gonna dispplay user photo -->
+        <img src="{{member.photoUrl}}" alt="{{member.knownAs}}" class="card-img-top"><!--class="card-img-top" means that image 
+            will be at the top of the card  -->
+        <ul class="list-inline member-icons animate text-center">
+            <!-- here we will add a list for the buttons -->
+            <li class="list-inline-item" routerLink='/members/{{member.username}}'>
+                <button class="btn btn-primary">
+                    <i class="fa fa-user"></i>
+                </button> 
+            </li>
+            <li class="list-inline-item">
+                <button class="btn btn-primary">
+                    <i class="fa fa-heart"></i>
+                </button> 
+            </li>
+            <li class="list-inline-item">
+                <button class="btn btn-primary">
+                    <i class="fa fa-envelope"></i>
+                </button> 
+            </li>
+        </ul>
+            
+       
+        <div class="card-body p-1"> <!-- now we will add class="card-body p-1" 
+            body of card will be with padding 1 -->
+            <!-- now we will add header tag with
+            attribute tittle and alligin text in 
+            the center and margin bottom 1 -->
+            <h6 class="card-title text-center mb-1">
+                <!-- here we will add icons 
+                    type fa
+                 icon fa-user
+                margin right 2-->
+                <i class="fa fa-user mr-2"></i>{{member.username|titlecase}}
+                <p class="card-text text-muted text-center">{{member.city}}</p>
+            </h6>
+        </div>
+    </div>
+</div>

@@ -1,1 +1,60 @@
-<p>members-detail works!</p>
+<!-- we will check if member exista with *ngIf -->
+
+<div class="row" *ngIf="member">
+    <div class="col-4">
+        <div class="card">
+            <!-- we adding this url in case if its new user and he still dont have
+            a photo, we will create this a little bit later -->
+            <img src="{{member.photoUrl||'./assets/user.png'}}" class="card-img-top img-thumbnail" 
+                 alt="{{member.username}}">
+            <div class="card-body">
+                <div>
+                    <strong>Location:</strong>
+                    <p>{{member.city}},{{member.country}}</p>
+                </div>
+                <div>
+                    <strong>Age:</strong>
+                    <p>{{member.age}}</p>
+                </div>
+                <div>
+                    <strong>Member since:</strong>
+                    <p>{{member.created}}</p>
+                </div>
+                <div>
+                    <strong>Last Active:</strong>
+                    <p>{{member.lastactive}}</p>
+                </div>
+            </div> 
+            <div class="card-footer">
+                <div class="btn-group d-flex">
+                    <button class="btn btn-primary">Like</button>
+                    <button class="btn btn-success">Message</button>
+                </div>
+            </div>     
+
+        </div>
+    </div>
+
+    <!-- adding tabset for additional user info -->
+    <div class="col-8">
+        <tabset class="member-tabset">
+            <tab heading="About {{member.username|titlecase}}">
+                <h4>Description</h4>
+                <p>{{member.introduction}}</p>
+                <h4>Looking for:</h4>
+                <p>{{member.lookingFor}}</p>
+            </tab>
+            <tab heading="Interests">
+                <h4>Interests</h4>
+                <p>{{member.interests}}</p>
+               
+            </tab>
+            <tab heading="Photos">
+               <ngx-gallery id="gallery"  [options]="galleryOptions" [images]="galleryImages"></ngx-gallery>
+            </tab>
+            <tab heading="Messages">
+                <p>Messages will go here</p>
+             </tab>
+        </tabset>
+    </div>
+</div>

@@ -19,7 +19,7 @@ import { AuthGuard } from './_guards/auth.guard';
       canActivate:[AuthGuard],
       children:[
   {path:'members',component:MembersListComponent ,canActivate:[AuthGuard]},//localhost:4200/members
-  {path:'members/:id',component:MembersDetailComponent},//localhost:4200/members/5   the-":id" is parametr indicator
+  {path:'members/:username',component:MembersDetailComponent},//localhost:4200/members/5   the-":id" is parametr indicator
   {path:'lists',component:ListsComponent},//localhost:4200/lists
   {path:'messages',component:MessagesComponent},//localhost:4200:messages
   ] 
